@@ -95,7 +95,7 @@ const updateUserPassword = function() {
     return User.findOne({ username: 'Kenny_the_boy' })
         .then(function( user ) {
             console.log( 'Old password is ' + user.password );
-            console.log( 'Name ' + username );
+            console.log( 'Name ' + user.name );
             user.password = 'newPassword';
             console.log( 'New password is ' + user.password );
             return user.save( function( err ) {
